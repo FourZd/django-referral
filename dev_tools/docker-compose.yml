@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: ../
+      dockerfile: dev_tools/Dockerfile
+    image: referral
+    volumes:
+      - ..:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_NAME=referral
+      - DATABASE_USER=user
+      - DATABASE_PASSWORD=password
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_DB: referral
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
