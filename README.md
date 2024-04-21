@@ -2,8 +2,35 @@
 
 This document provides detailed information about the REST API endpoints available in this Django project. Each endpoint is described with its method, URL, required parameters, and possible responses.
 
-## Authentication
+## Swagger UI
 
+The project includes an interactive Swagger UI that provides detailed information about all the API endpoints, their required parameters, and possible responses. This tool allows you to test API endpoints directly from your web browser.
+
+### Accessing Swagger UI
+
+To access the Swagger UI, navigate to the following URL:
+
+[{URL}/api/schema/swagger-ui/]
+
+This URL will lead you to the interactive API documentation where you can:
+
+- **Explore all available API endpoints**: Each endpoint is listed with HTTP methods and a brief description.
+- **Try out the API calls**: You can execute requests to the API directly from the Swagger interface. To do so, expand the endpoint details, fill in the required parameters, and click the "Try it out" button.
+- **View the request and response details**: Swagger UI provides a detailed view of the request headers, response body, status code, and headers.
+
+### Using Swagger UI
+
+To make effective use of the Swagger UI, follow these steps:
+
+1. **Authenticate**: For endpoints requiring authentication, obtain a token via the authentication endpoints and use this token by clicking the "Authorize" button at the top of the Swagger page.
+2. **Select an endpoint**: Click on any endpoint to expand its details.
+3. **Set parameters**: If the endpoint requires parameters, enter them in the respective fields.
+4. **Send the request**: Click the "Execute" button to send the request to the API and view the response directly in the Swagger UI.
+
+This interactive documentation is an excellent resource for developers looking to integrate with or explore the API, providing a hands-on approach to learning how each part of the API functions.
+
+
+## Authentication
 
 ## Refresh Token
 
